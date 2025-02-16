@@ -1,0 +1,8 @@
+C:\Users\isaac\Desktop\WeatherApp\obj\Release\net8.0\PubTmp\Out\WeatherApp.exe
+C:\Users\isaac\Desktop\WeatherApp\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+C:\Users\isaac\Desktop\WeatherApp\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\Users\isaac\Desktop\WeatherApp\obj\Release\net8.0\PubTmp\Out\WeatherApp.dll
+C:\Users\isaac\Desktop\WeatherApp\obj\Release\net8.0\PubTmp\Out\WeatherApp.deps.json
+C:\Users\isaac\Desktop\WeatherApp\obj\Release\net8.0\PubTmp\Out\WeatherApp.runtimeconfig.json
+C:\Users\isaac\Desktop\WeatherApp\obj\Release\net8.0\PubTmp\Out\WeatherApp.pdb
+C:\Users\isaac\Desktop\WeatherApp\obj\Release\net8.0\PubTmp\Out\Newtonsoft.Json.dll

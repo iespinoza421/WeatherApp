@@ -1,0 +1,45 @@
+﻿@using Newtonsoft.Json.Linq
+@model WeatherApp.Models.WeatherModel
+@{
+    Layout = null;
+}
+@{
+    var forecastData = ViewBag.Clima as JObject;
+    if (forecastData != null)
+    {
+        var city = forecastData["city"]["name"];
+        var list = forecastData["list"];
+        var filteredList = new List<JToken>();
+
+        var dates = new HashSet<string>();
+        foreach (var item in list)
+        {
+            var date = ((string)item["dt_txt"]).Split(' ')[0];
+            if (!dates.Contains(date))
+            {
+                dates.Add(date);
+                filteredList.Add(item);
+            }
+        }
+
+        <h3>Forecast for the Next 5 days.</h3>
+        <div class="row">
+            @foreach (var item in filteredList)
+            {
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">@((string)item["dt_txt"])</h5>
+                            <p class="card-text">Temperature: @item["main"]["temp"]°C</p>
+                            <p class="card-text">Weather: @item["weather"][0]["description"]</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p>It was not possible to obtain the forecast information.</p>
+    }
+}

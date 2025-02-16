@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WeatherApp</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+	<link rel="stylesheet" href="~/css/site.css" />
+
+</head>
+<body>
+    
+    <h1 class="text-center mt-4 mb-3">Weather App</h1>
+
+
+    <div class="container">
+        <p class="text-center pb-1">Move the marker around the map and discover the current weather around the world!</p>
+        @RenderBody()
+    </div>
+
+    
+    <footer>
+        <div class="container text-center">
+            &copy; 2025 - WeatherApp - Made by Isaac Espinoza.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="~/js/site.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

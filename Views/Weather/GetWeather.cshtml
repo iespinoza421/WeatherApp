@@ -1,0 +1,29 @@
+﻿@using Newtonsoft.Json.Linq
+@model WeatherApp.Models.WeatherModel
+@{
+    Layout = null; 
+}
+@{
+    var weatherData = ViewBag.Clima as JObject;
+    if (weatherData != null)
+    {
+        var city = weatherData["name"];
+        var temperature = weatherData["main"]["temp"];
+        var description = weatherData["weather"][0]["description"];
+        var icon = weatherData["weather"][0]["icon"];
+        var iconUrl = $"http://openweathermap.org/img/wn/{icon}@2x.png";
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">@city</h5>
+                <img src="@iconUrl" alt="Weather Icon" />
+                <p class="card-text">Temperature: @temperature °C</p>
+                <p class="card-text">Description: @description</p>
+            </div>
+        </div>
+    }
+    else
+    {
+        <p>It was not possible to obtain the weather information.</p>
+    }
+}
