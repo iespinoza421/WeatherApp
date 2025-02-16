@@ -26,10 +26,11 @@
         <div class="row">
             @foreach (var item in filteredList)
             {
+                var date = ((string)item["dt_txt"]).Split(' ')[0];
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
-                            <h5 class="card-title">@((string)item["dt_txt"])</h5>
+                            <h5 class="card-title">@date</h5>
                             <p class="card-text">Temperature: @item["main"]["temp"]°C</p>
                             <p class="card-text">Weather: @item["weather"][0]["description"]</p>
                         </div>
