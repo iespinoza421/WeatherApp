@@ -6,7 +6,7 @@ namespace WeatherApp.Services
     public class WeatherServices
     {
         //API Key
-        private readonly string apiKey = "411602552d479b666b9af8432eaaf972";
+        private readonly string apiKey = "YouApiKey";
         //HTTP Client for requests
         private readonly HttpClient _httpClient;
 
