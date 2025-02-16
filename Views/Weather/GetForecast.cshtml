@@ -15,14 +15,14 @@
         foreach (var item in list)
         {
             var date = ((string)item["dt_txt"]).Split(' ')[0];
-            if (!dates.Contains(date))
+            if (!dates.Contains(date) && dates.Count < 3)
             {
                 dates.Add(date);
                 filteredList.Add(item);
             }
         }
 
-        <h3>Forecast for the Next 5 days.</h3>
+        <h3>Forecast for the Next 3 days.</h3>
         <div class="row">
             @foreach (var item in filteredList)
             {
